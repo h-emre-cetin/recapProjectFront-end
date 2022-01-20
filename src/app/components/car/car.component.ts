@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Car } from 'src/app/models/car';
 
 @Component({
   selector: 'app-car',
@@ -7,12 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarComponent implements OnInit {
 
-  car1={carId:1, carName:"Corolla", brandId:1, DailyPrice:450};
-  car2={carId:2, carName:"Civic", brandId:2, DailyPrice:350};
-  car3={carId:3, carName:"Megane", brandId:3, DailyPrice:450};
-  car4={carId:4, carName:"Egea", brandId:4, DailyPrice:450};
+ 
 
-  cars = [this.car1, this.car2,this.car3, this.car4,];
+  cars:Car[] = [];
 
   constructor() { }
 
