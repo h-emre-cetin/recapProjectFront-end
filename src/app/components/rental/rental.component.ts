@@ -13,11 +13,11 @@ export class RentalComponent implements OnInit {
   constructor(private rentalService:RentalService) { }
 
   ngOnInit(): void {
-    this.getRentals();
+    this.getRentalsDto();
   }
 
-  getRentals(){
-    this.rentalService.getRentals().subscribe(response=>{
+  getRentalsDto(){
+    this.rentalService.getRentalsDto().subscribe(response=>{
       this.rentals = response.data
       this.dataLoaded= true;
     })
